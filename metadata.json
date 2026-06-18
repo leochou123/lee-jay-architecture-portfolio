@@ -1,0 +1,6 @@
+{
+  "name": "Architect Design Portfolio",
+  "description": "An elegant, minimalist Apple-style interactive architectural design portfolio for Lee Jay ZHOU, highlighting advanced architectural AI R&D, parametric layouts, and interactive blueprints.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

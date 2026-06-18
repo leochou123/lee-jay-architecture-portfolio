@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+
+/* Custom CSS variables & styles */
+:root {
+  --font-serif: "Playfair Display", "Georgia", serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #faf9f6; /* Soft warm museum off-white background */
+  color: #1c1c1e;
+  overflow-x: hidden;
+}
+
+/* Engineering Matrix Grid Pattern */
+.engineering-grid {
+  background-image: 
+    radial-gradient(circle, rgba(0,0,0,0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Organic Morphing Blob Avatar */
+@keyframes morph-blob {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 40% 60% 70% 30% / 50% 60% 30% 70%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+.animate-blob-morph {
+  animation: morph-blob 9s ease-in-out infinite;
+}
+
+/* Line growth animation for intro screen */
+@keyframes line-grow {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  50% {
+    width: 100%;
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.animate-line-grow {
+  animation: line-grow 2.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Elegant float / breathing animations */
+@keyframes breath-fade {
+  0%, 100% {
+    opacity: 0.35;
+    transform: translateY(0px) scaleX(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(4px) scaleX(1.05);
+  }
+}
+
+.animate-breath-guide {
+  animation: breath-fade 2s ease-in-out infinite;
+}
+
+/* Vertical 3D perspective scroll effects */
+.timeline-viewport {
+  perspective: 1200px;
+}
+
+/* Horizontal scroll container with momentum */
+.horizontal-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.horizontal-scroll-item {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* Horizontal marquee slow scrolling */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee-scroll 28s linear infinite;
+}
+
+.animate-marquee-paused-on-hover:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+
